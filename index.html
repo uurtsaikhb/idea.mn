@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>idea.mn</title>
 </head>
-<body>
-
+<body ng-controller="TestCtrl as t">
+    <h2> {{ t.text }} </h2>
 </body>
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="webapp/app.js"></script>
 </html>
