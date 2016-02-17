@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-    <meta charset="UTF-8">
-    <title>idea.mn</title>
-</head>
-<body ng-controller="TestCtrl as t">
-    <h2> {{ t.text }} </h2>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>idea.mn</title>
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container" ng-app="app">
+            <header ng-include="'app/component/header/header.html'"></header>
+            <div ui-view></div>
+            <footer ng-include="'app/component/footer/footer.html'"></footer>
+        </div>
 
-<script src="node_modules/angular/angular.min.js"></script>
-<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-<script src="webapp/app.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/component/home/HomeController.js"></script>
+        <script src="app/component/about/AboutController.js"></script>
+        <script src="app/component/header/HeaderController.js"></script>
+    </body>
 </html>
