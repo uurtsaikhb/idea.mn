@@ -4,11 +4,17 @@
         <meta charset="UTF-8">
         <title>idea.mn</title>
         <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="app/assets/css/header.css" rel="stylesheet">
+        <link href="app/assets/css/main.css" rel="stylesheet">
+        <link href="app/externals/css/grid.css" rel="stylesheet">
+        <link href="app/externals/css/ionicons.min.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container" ng-app="app">
+        <div ng-app="app">
             <header ng-include="'app/component/header/header.html'"></header>
-            <div ui-view></div>
+            <div class="container">
+                <div ui-view></div>
+            </div>
             <footer ng-include="'app/component/footer/footer.html'"></footer>
         </div>
 
