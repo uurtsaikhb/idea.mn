@@ -2,6 +2,7 @@
 
     angular
         .module('app', [
+            'app.home',
             'app.header',
             'app.about',
             'ui.router'
@@ -13,12 +14,14 @@
                 .state('home', {
                     url: '/',
                     templateUrl: 'app/component/home/home.html',
-                    controller: 'HomeController'
+                    controller: 'HomeController',
+                    controllerAs: 'home'
                 })
                 .state('about', {
                     url: '/about',
                     templateUrl: 'app/component/about/about.html',
-                    controller: 'AboutController'
+                    controller: 'AboutController',
+                    controllerAs: 'about'
                 })
                 .state('profile', {
                     url: '/profile',

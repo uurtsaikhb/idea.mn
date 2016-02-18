@@ -4,9 +4,17 @@
 
 (function () {
 
-    angular.module('app')
-        .controller('HomeController', ['$scope', function($scope) {
-            $scope.title = 'Home page';
-        }])
+    function HomeController($http) {
+        var home = this;
+        home.title = "This is a home page";
+
+        $http.get('app/api/user.json').then(function(response) {
+            home.users = response.data;
+        });
+    };
+
+
+    angular.module('app.home', [])
+        .controller('HomeController', ['$http', HomeController])
 
 })();
