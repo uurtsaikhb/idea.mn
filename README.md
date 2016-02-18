@@ -1,1 +1,1 @@
-# idea.mn
+## idea.mn
