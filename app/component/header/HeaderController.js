@@ -1,11 +1,13 @@
 (function () {
 
-    var HomeController = function ($scope, $state) {
-        $scope.$state = $state;
+    function HeaderController($state) {
+
+        var header = this;
+        header.$state = $state;
     };
 
     angular
         .module('app.header', [])
-        .controller('HeaderController', ['$scope', '$state', HomeController])
+        .controller('HeaderController', ['$state', HeaderController])
 
 })();

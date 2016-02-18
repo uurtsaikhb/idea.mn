@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="HeaderController as header">
     <div class="row">
         <div class="col span-4-of-12 header-title">
             <h3>idea.mn</h3>
@@ -8,14 +8,11 @@
             <i class="ion-ios-search"></i>
         </div>
         <div class="col span-4-of-12">
-            <ul class="main-nav" ng-controller="HeaderController">
-                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
-                <li ng-class="{active: $state.includes('about')}"><a ui-sref="about">About</a></li>
-                <li ng-class="{active: $state.includes('profile')}"><a ui-sref="profile">Profile</a></li>
+            <ul class="main-nav">
+                <li><a ng-class="{selected: header.$state.includes('home')}" ui-sref="home">Home</a></li>
+                <li><a ng-class="{selected: header.$state.includes('about')}" ui-sref="about">About</a></li>
+                <li><a ng-class="{selected: header.$state.includes('profile')}" ui-sref="profile">Profile</a></li>
             </ul>
         </div>
     </div>
-
-
-
 </div>
